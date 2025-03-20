@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="vehicle_details.html">Vehicle Details</a></li> <!-- Link to vehicle_details.html -->
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Electric Vehicle Battery Control Panel</h1>
+
+        <div class="module">
+            <h2>Battery Temperature Control</h2>
+            <div class="module-content">
+                <p>Current Temperature: <span id="temperature">0</span>°C</p>
+                <input type="range" id="tempSlider" min="-10" max="120" value="0" step="1" oninput="updateTemperature()">
+                <p id="warning" class="warning"></p>
+                <p id="batteryCondition">Battery Condition: Good</p>
+            </div>
+        </div>
+
+        <div class="module">
+            <h2>Battery Charge Level</h2>
+            <div class="module-content">
+                <p>Current Charge: <span id="charge">50</span>%</p>
+                <input type="range" id="chargeSlider" min="0" max="100" value="50" step="1" oninput="updateCharge()">
+                <p id="chargeWarning" class="warning"></p>
+            </div>
+        </div>
+
+        <div class="module">
+            <h2>Battery Efficiency</h2>
+            <div class="module-content">
+                <p>Efficiency: <span id="efficiency">95</span>%</p>
+                <input type="range" id="efficiencySlider" min="60" max="100" value="95" step="1" oninput="updateEfficiency()">
+                <p id="efficiencyStatus" class="status"></p>
+            </div>
+        </div>
+
+        <div class="module">
+            <h2>Battery Health Monitoring</h2>
+            <div class="module-content">
+                <p id="batteryHealth">Battery Health: 100%</p>
+                <p id="tempImpact"></p>
+            </div>
+        </div>
+
+        <button onclick="window.location.href='webpage.html'">Back</button> <!-- Back button -->
+    </div>
+    <div class="module">
+        <h2>Battery Charge History</h2>
+        <canvas id="chargeChart" width="400" height="200"></canvas>
+    </div>
+    <div id="notificationArea" class="notification-area"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

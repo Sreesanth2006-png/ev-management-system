@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Monitoring System</title>
+    <link rel="stylesheet" href="webpage.css">
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active'); // Toggle the menu visibility
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <h1>Welcome to the EV Monitoring System</h1>
+    </header>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Battery Control Panel</a></li>
+            <li><a href="vehicle_details.html">Vehicle Details</a></li>
+            <li><a href="webpage.html">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About the EV Monitoring System</h2>
+            <p>This system allows you to monitor and analyze the battery health and performance of your electric vehicle.</p>
+        </section>
+
+        <section id="services">
+            <h2>Features</h2>
+            <p>Manage battery temperature, charge level, and efficiency.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Get Started</h2>
+            <p> Ready to take control of your electric vehicle's battery? Click the button below to start!</p>
+        </section>
+
+        <button onclick="window.location.href='index.html'">Get Started</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EV Monitoring System. All rights reserved.</p>
+    </footer>
+
+    <script src="webpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Details</title>
+    <link rel="stylesheet" href="vehicle_styles.css"> <!-- Updated CSS file link -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Vehicle Battery Monitoring System</h1>
+
+        <form id="vehicleForm" onsubmit="return analyzeVehicleDetails(event)">
+            <div class="module">
+                <h2>Battery Temperature Control</h2>
+                <div class="module-content">
+                    <label for="tempInput">Enter Temperature (°C):</label>
+                    <input type="number" id="tempInput" min="-10" max="120" required>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2>Battery Charge Level</h2>
+                <div class="module-content">
+                    <label for="chargeInput">Enter Charge Level (%):</label>
+                    <input type="number" id="chargeInput" min="0" max="100" required>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2>Battery Efficiency</h2>
+                <div class="module-content">
+                    <label for="efficiencyInput">Enter Efficiency (%):</label>
+                    <input type="number" id="efficiencyInput" min="60" max="100" required>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2>Battery Health Monitoring</h2>
+                <div class="module-content">
+                    <p id="batteryHealth" class="status">Battery Health: <span id="healthStatus">N/A</span></p>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+            <p id="vehicleAnalysis" class="status"></p>
+        </form>
+    </div>
+
+    <script src="vehicle_analysis.js"></script> <!-- Updated JavaScript file link -->
+</body>
+</html>
